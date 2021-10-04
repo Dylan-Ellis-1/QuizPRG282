@@ -19,7 +19,14 @@ namespace QuizPRG282
 
         private void btnRead_Click(object sender, EventArgs e)
         {
+            List<string> text = new List<string>();
             
+            text = File.ReadAllLines("text.txt").ToList();
+            
+            foreach (string line in text)
+            {
+                listBox1.Items.Add(line);
+            }
         }
     }
 }
